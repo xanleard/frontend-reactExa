@@ -1,0 +1,18 @@
+.modelo {
+    display: grid;
+    grid-template-rows: 80px 60px calc(100% - 260px);
+}
+
+.modelo .ms-CommandBar {
+    background-color: #f3f2f1;
+}
+
+.modelo .ms-CommandBar button{
+    background-color: #f3f2f1;
+}
+
+.modelo .ms-CommandBar button :hover{
+    background-color: #e1dfdd;
+}
+
+.contenedorLista{ overflow: auto;}
