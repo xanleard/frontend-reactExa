@@ -27,7 +27,7 @@ export const Login = ({ history }) => {
         debugger
 
         if (response === 'sucess') {
-            history.push('/estudiantes');
+            history.push('/cursos');
         }
 
         setMessage(response);
