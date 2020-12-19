@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 import { Header } from '../Header';
-import { Carro } from '../../Containers/carro';
+import { Carro } from  '../../Containers/carro';
+import { Modelo } from '../../Containers/modelo';
 
 import './container.css'
 export const ContainerMain = () =>{
@@ -54,7 +55,7 @@ export const ContainerMain = () =>{
             <Router>
                 <Switch>
                     <Route  path="/carros" component={Carro}/>
-                    <Route  path="/modelos" component={()=><span> componentes</span>}/>
+                    <Route  path="/modelos" component={Modelo}/>
 
 
                     <Route  path="/usuarios" component={()=><span> componentes</span>}/>

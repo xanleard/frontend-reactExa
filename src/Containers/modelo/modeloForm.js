@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Dropdown, PrimaryButton, ProgressIndicator, TextField } from '@fluentui/react';
 import { restClient } from '../../Services/restClient';
 
-export const ModeloForm = ({ fetchModelos, ModeloSeleccionado, acccion, onDismiss }) => {
+export const ModeloForm = ({ fetchModelos, ModeloSeleccionado, acccion, onDismiss }) => {  
     const [modelo, setModelo] = useState({
         id: acccion === 'Edit' ? ModeloSeleccionado.id : 0,
         nombre: acccion === 'Edit' ? ModeloSeleccionado.nombre : '',

@@ -4,7 +4,7 @@ import './modelo.css'
 import { restClient } from '../../Services/restClient';
 import { ModeloForm } from './modeloForm';
 
-export const Carro = () => {
+export const Modelo = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenAlert, setIsOpenAlert] = useState(true);
     const [modelos, setModelos] = useState(undefined); //data.map(item => ({ ...item, nombreCurso: item.curso.nombre }))
@@ -18,7 +18,7 @@ export const Carro = () => {
 
     const fetchModelos = async () => {
         const response = await restClient.httpGet('/modelo');
-
+        console.log(response);
         if (!response.length) {
             return;
         }
@@ -48,7 +48,7 @@ export const Carro = () => {
     const seleccion = new Selection({
         onSelectionChanged: () => {
             const itemSeleccionado = seleccion.getSelection();
-
+console.log(itemSeleccionado);
             setModelo(itemSeleccionado.length ? itemSeleccionado[0] : null);
 
         },
@@ -84,7 +84,7 @@ export const Carro = () => {
         if (!modelo) return;
 
         const response = await restClient.httpDelete('/modelo', modelo.id);
-
+        console.log(response)
         if (response === 'success') {
             handleDismissAlertClick();
             setModelos(undefined);
@@ -163,7 +163,7 @@ export const Carro = () => {
             >
                 <ModeloForm // Este es el formulario que contiene los controles con la información
                     fetchModelos={fetchModelos} // Hace un GET a la API
-                    modeloSeleccionado={modelo || {}}
+                    ModeloSeleccionado={modelo || {}}
                     acccion={acccion}
                     onDismiss={handleDismissClick}
                 />

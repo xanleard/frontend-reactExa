@@ -165,7 +165,7 @@ export const Carro = () => {
             >
                 <CarroForm // Este es el formulario que contiene los controles con la información
                     fetchCarros={fetchCarros} // Hace un GET a la API
-                    estudianteSeleccionado={carro || {}}
+                    CarroSeleccionado={carro || {}}
                     acccion={acccion}
                     onDismiss={handleDismissClick}
                 />
